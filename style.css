@@ -1,3 +1,456 @@
+/*general styles*/
 * {
+    box-sizing: border-box;
+    margin: 0;
+    font-family:  'Open Sans', sans-serif;
+}
+
+/*---------Styling main landing page------------*/
+
+main.landing-page {
+    height: auto;
+    min-height: 560px;
+    padding: 2% 8vw;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links ul {
+    display: flex;
+}
+
+.nav-links ul li{
+    list-style: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight:400;
+    margin: 0 20px;
+    font-size: 16px;
+}
+.nav-links ul li a:hover{
+    text-shadow: 0 0 8px rgba(243, 107, 127, 1);
+}
+
+#login-button {
+    color: rgba(243, 107, 127, 1);
+    background: transparent;
+    border: 2px solid rgba(243, 107, 127, 1);
+    padding: 4px 40px;
+    border-radius: 25px;
+    transition: cubic-bezier(0.23, 1, 0.320, 1) .8s;
+}
+
+#login-button:hover {
+    box-shadow: 0 0 20px rgba(243, 107, 127, 1);
+}
+
+.hidden {
+    display:none;
+}
+
+.main-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content>h1 {
+    color:rgba(43, 63, 96, 1);
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 68px;
+}
+
+p {
+    color: rgba(43, 63, 96, 1);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    line-height: 28px;
+}
+
+.main-content>p {
+    padding: 30px 0;
+}
+
+button {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(243, 107, 127, 1);
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: none;
+}
+
+.main-container>img {
+    width: 45vw;
+}
+
+@media (max-width:992px), (max-width:1200px) {
+    main.landing-page {
+        padding:2% 6vw;
+        height: fit-content;
+    }
+
+    .main-content>h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .nav-links ul li a {
+        margin: 10px;
+    }
+
+}
+
+@media (max-width:860px) {
+    main.landing-page {
+        height:auto;
+    }
+    .nav-links {
+        display:none;
+    }
+
+    .hidden {
+        display:block;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        text-align: center;
+    }
+    .main-container>img {
+        width: 80%;
+    }
+}
+
+@media (max-width:450px) {
+    main.landing-page {
+        padding:5% 6vw;
+    }
+    .main-container>img {
+        width: 100%;
+        height: 50vh;
+    }
+
+}
+
+
+@media (max-width:300px) {
+    .hidden {
+        display:block;
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+}
+
+/*----------styling sponsors section------------*/
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0;
+}
+.sponsors>img {
+    opacity: 0.5;
+    padding: 20px;
+} /*sponsors section already responsive*/
+
+
+/*---------Styling Download App Section--------*/
+.download-app {
+    position: relative;
+    padding: 80px 8vw;
+    padding-bottom: 0;
+    background-color: rgba(243, 107, 127, 1);
+    display: flex;
+    color: rgba(253,254, 255, 1);
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.download-app-details {
+    padding: 40px 40px 0 0 ;
+}
+
+.download-app-details>h1 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 3px;
+}
+
+.download-app-details>p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    color: rgba(253, 254, 255, 1);
+    padding: 35px 0;
+}
+
+.download-app .app>img {
+    position: relative;
+    width: 360px;
+    transform: translateY(5px);
+}
+
+@media (max-width:1024px) and (min-width:769px) {
+    .download-app-details>h1 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 3px;
+    }
     
+    .download-app-details>p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height:28px;
+        color: rgba(253, 254, 255, 1);
+        padding: 20px 0;
+    }
+    
+
+}
+
+@media (max-width:768px) {
+    .download-app {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .download-app-details {
+        padding:0 ;
+    }
+
+    .download-app-details>h1 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 38px;
+        letter-spacing: 2px;
+    }
+}
+@media (max-width:420px) {
+        .download-app-details>h1 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 2px;
+        }
+
+        .download-app-details>p {
+            font-size: 16px;
+            line-height: 25px;
+        }
+        .download-app .app>img {
+            position: relative;
+            width: 250px;
+            transform: translateY(5px);
+        }        
+    }
+
+/*------------Styling Services Section------------*/
+.services-section {
+    background: rgba(245, 247, 253, 1);
+    padding: 80px 40px;
+}
+
+.container>h1 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 900;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.service {
+    height: 300px;
+    width:330px;
+    text-align: center;
+    padding: 10px;
+    background: white;
+    border-radius: 25px;
+    border: 2px solid white;
+    margin: auto 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.service-image {
+    padding: 30px;
+    border-radius: 80%;
+    border: none;
+    transform: translateY(-80px);
+}
+
+.office-image {
+    background: rgba(130, 181, 165, 1);
+}
+
+.home-image {
+    background: rgba(248, 207, 97, 1);
+}
+
+.outdoor-image {
+    background: rgba(133, 187, 255, 1);
+}
+
+.service-title {
+    font-size: 24px;
+    font-weight: 700;
+    transform: translateY(-50px);
+    padding-bottom: 10px;
+}
+
+.service-paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(43, 63, 96, 1);
+    transform: translateY(-50px);
+}
+/*Services Section Already Responsive*/
+
+@media (max-width:452px) {
+    .services-section {
+        padding: 50px 10px;
+    }
+    .service-image {
+        padding: 20px;
+    }
+    .service-title {
+        font-size: 24px;
+        line-height: 20px;
+    }
+    
+    .service-paragraph {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .service {
+        width: 85%;
+    }
+
+}
+/* ---------Contact Section---------- */
+.book-now {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 0 100px;
+}
+
+.book-now-content {
+    padding-top: 50px;
+}
+
+.book-now-content>h1{
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 900;
+}
+
+.book-now-content>p {
+    font-size: 16px;
+    font-weight:400;
+    line-height: 24px;
+    padding: 20px 0 ;
+    color: rgba(43, 63, 96, 1);
+}
+
+.book-now >img {
+    position: relative;
+    width: 40%;
+}
+
+@media (max-width:892px) {
+    .book-now {
+        padding:0 40px 0 40px;
+    }
+    
+    .book-now-content {
+        padding-top: 25px;
+        text-align:center;
+    }
+    .book-now >img {
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 70vh;
+    }
+
+}
+
+@media (max-width:420px) {
+    .book-now {
+        padding: 0 20px 0 20px;
+    }
+    .book-now-content {
+        padding-top: 12.5px;
+        text-align: center;
+    }
+
+    .book-now-content>h1{
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 700;
+    }
+    
+    .book-now-content>p {
+        font-size: 14px;
+        font-weight:400;
+        line-height: 22px;
+    }
+    
+    .book-now >img {
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 70vh;
+    }
+}
+
+footer{
+    display:flex ;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(130, 181, 165, 1);
+    border-radius: 150px 0 0 0;
+    padding: 35px 70px 35px 120px;
+}
+
+@media (max-width:768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 70px 0 0 0;
+        padding: 15px 40px 15px 70px;
+    }
 }
