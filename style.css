@@ -387,9 +387,11 @@ button {
     width: 40%;
 }
 
-@media (max-width:892px) {
+@media (max-width:892px), (max-width:1024px) {
     .book-now {
         padding:0 40px 0 40px;
+        flex-direction: column;
+        align-items: center;
     }
     
     .book-now-content {
@@ -398,8 +400,6 @@ button {
     }
     .book-now >img {
         position: relative;
-        left:50%;
-        transform: translateX(-50%);
         width: 80%;
         height: 70vh;
     }
@@ -409,6 +409,8 @@ button {
 @media (max-width:420px) {
     .book-now {
         padding: 0 20px 0 20px;
+        justify-content: center;
+
     }
     .book-now-content {
         padding-top: 12.5px;
@@ -429,8 +431,6 @@ button {
     
     .book-now >img {
         position: relative;
-        left:50%;
-        transform: translateX(-50%);
         width: 90%;
         height: 70vh;
     }
